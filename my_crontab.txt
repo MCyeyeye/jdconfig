@@ -1,3 +1,6 @@
+# update task and crontab
+1 6-22 * * * /bin/sh /scripts/docker/default_task.sh
+
 #delete old run all task shell
 1 * * * * rm -rf /scripts/runall.sh
 
