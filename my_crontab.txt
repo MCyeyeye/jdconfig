@@ -1,0 +1,5 @@
+#download run all task shell
+1 * * * * wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
+
+# execute runall tash shell
+*/5 * * * * /bin/sh /scripts/runall.sh
