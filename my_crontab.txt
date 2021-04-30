@@ -9,3 +9,6 @@
 
 # execute runall tash shell
 5 * * * * /bin/sh /scripts/runall.sh
+
+# meng niu milk
+*/5 * * * * node /scripts/monk_pasture.js
