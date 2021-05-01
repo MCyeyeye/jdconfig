@@ -8,7 +8,7 @@
 2 * * * * wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
 
 # execute runall tash shell
-5 * * * * /bin/sh /scripts/runall.sh |ts >> /scripts/logs/runall.log 2>&1
+5 */3 * * * /bin/sh /scripts/runall.sh |ts >> /scripts/logs/runall.log 2>&1
 
 # meng niu milk 
 1 */3 10-20 * * node /scripts/monk_pasture.js |ts >> /scripts/logs/monk_pasture.log 2>&1
