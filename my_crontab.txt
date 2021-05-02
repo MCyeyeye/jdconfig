@@ -12,3 +12,6 @@
 
 # meng niu milk 
 1 */3 10-20 * * node /scripts/monk_pasture.js |ts >> /scripts/logs/monk_pasture.log 2>&1
+
+# shop captain
+25 3 * * 2 node /scripts/z_shop_captain.js |ts >> /scripts/logs/shop_capyain.log  2>&1
