@@ -7,7 +7,7 @@ rm -rf /scripts/runall.sh
 wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
 
 rm -rf /scripts/monk_pasture.js
-wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/monk_pasture.js
+wget -P https://github.com/monk-coder/dust/blob/dust/member/monk_pasture.js
 
 rm -rf  /scripts/z_shop_captain.js
 wget -P /scripts https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js
