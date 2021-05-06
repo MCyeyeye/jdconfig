@@ -11,3 +11,6 @@ wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/monk_pa
 
 rm -rf  /scripts/z_shop_captain.js
 wget -P /scripts https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js
+
+rm -rf  /scripts/jd_super_redrain.js
+wget -P /scripts https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js
