@@ -1,69 +1,72 @@
-jd_scripts:
-  image: lxk0301/jd_scripts
-  container_name: jd2
-  restart: always
-  volumes:
-    - /root/host_dir_jd:/scripts/host_dir
-  tty: true
-  extra_hosts:
-    - "gitee.com:180.97.125.228"
-    - "github.com:13.229.188.59"
-    - "raw.githubusercontent.com:151.101.228.133"
-  environment:
-    - REPO_URL=git@gitee.com:lxk0301/jd_scripts.git
-    # 注意环境变量填写值的时候一律不需要引号（""或者''）下面这些只是示例，根据自己的需求增加删除
-    #jd cookies
-    # 例: JD_COOKIE=pt_key=XXX;pt_pin=XXX;
-    # 例（多账号）: JD_COOKIE=pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;
-    - JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgl-IUADCVac7g03YcPbs8yDKKmNGJWudsBNpHusub2eTpUJkf4CWJjmhNU-URuFBuoNuqt1k;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
-    #微信server酱通知
-    - PUSH_KEY=SCU80767T828814dd0d1a055417c2757c9b9d93595e3e92bf2e508
-    #京东种豆得豆
-    - PLANT_BEAN_SHARECODES=
-    #京东农场
-    # 例: FRUITSHARECODES=京东农场的互助码
-    - FRUITSHARECODES=
-    #京东萌宠
-    # 例: PETSHARECODES=东东萌宠的互助码
-    - PETSHARECODES=
-    # 宠汪汪的喂食数量
-    - JOY_FEED_COUNT=20
-    #东东超市
-    # - SUPERMARKET_SHARECODES=
-    #兑换多少数量的京豆（20，或者1000京豆,或者其他奖品的文字）
-    - MARKET_COIN_TO_BEANS=1000
-    #如果设置了 RANDOM_DELAY_MAX ，则会启用随机延迟功能，延迟随机 0 到 RANDOM_DELAY_MAX-1 秒。如果不设置此项，则不使用延迟。
-    #并不是所有的脚本都会被启用延迟，因为有一些脚本需要整点触发。延迟的目的有两个，1是降低抢占cpu资源几率，2是降低检查风险（主要是1）
-    #填写数字，单位为秒，比如写为 RANDOM_DELAY_MAX=30  就是随机产生0到29之间的一个秒数，执行延迟的意思。
-    - RANDOM_DELAY_MAX=120
-    #使用自定义定任务追加默认任务之后，上面volumes挂载之后这里配置对应的文件名
-    - CUSTOM_LIST_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/my_crontab.txt
-    - CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/custom_shell.sh
-    # ENABLE_AUTO_HELP	单容器多账号自动互助
-    - ENABLE_AUTO_HELP=true
-    # 是否jd_crazy_joy_coin挂机
-    - CRZAY_JOY_COIN_ENABLE=Y
-    # 京东赚赚是否有通知，false为有通知
-    - DDQ_NOTIFY_CONTROL=false
-    # 宠汪汪兑换京豆推送开关
-    - JD_JOY_REWARD_NOTIFY=false
-    # 宠汪汪帮好友喂食
-    - JOY_HELP_FEED=true
-    #宠汪汪是否赛跑
-    - JOY_RUN_FLAG=true
-    # 宠汪汪宠汪汪赛跑获胜后是否推送通知
-    - JOY_RUN_NOTIFY=true
-    # 宠汪汪赛跑自己账号内部互助
-    - JOY_RUN_HELP_MYSELF=true
-    # 宠汪汪积分兑换多少京豆
-    - JD_JOY_REWARD_NAME=500
-    #东东超市兑换奖品推送开关
-    - MARKET_REWARD_NOTIFY=false
-    #疯狂的JOY循环助力
-    - JDJOY_HELPSELF=true
-    # 疯狂的JOY京豆兑换
-    - JDJOY_APPLYJDBEAN=2000
-    #控制摇钱树脚本是否自动卖出金果兑换成金币，true卖出，false不卖出，默认false
-    - MONEY_TREE_SELL_FRUIT=true
-    # 东东工厂心仪商品
-    - FACTORAY_WANTPRODUCT_NAME=
+version: "3"
+services:
+  jd_scripts:
+    image: lxk0301/jd_scripts
+    container_name: jd2
+    restart: always
+    network_mode: host
+    volumes:
+      - /root/host_dir_jd:/scripts/host_dir
+    tty: true
+    extra_hosts:
+      - "gitee.com:180.97.125.228"
+      - "github.com:13.229.188.59"
+      - "raw.githubusercontent.com:151.101.228.133"
+    environment:
+      - REPO_URL=git@gitee.com:lxk0301/jd_scripts.git
+      # 注意环境变量填写值的时候一律不需要引号（""或者''）下面这些只是示例，根据自己的需求增加删除
+      #jd cookies
+      # 例: JD_COOKIE=pt_key=XXX;pt_pin=XXX;
+      # 例（多账号）: JD_COOKIE=pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;
+      - JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgl-IUADCVac7g03YcPbs8yDKKmNGJWudsBNpHusub2eTpUJkf4CWJjmhNU-URuFBuoNuqt1k;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
+      #微信server酱通知
+      - PUSH_KEY=SCU80767T828814dd0d1a055417c2757c9b9d93595e3e92bf2e508
+      #京东种豆得豆
+      - PLANT_BEAN_SHARECODES=
+      #京东农场
+      # 例: FRUITSHARECODES=京东农场的互助码
+      - FRUITSHARECODES=
+      #京东萌宠
+      # 例: PETSHARECODES=东东萌宠的互助码
+      - PETSHARECODES=
+      # 宠汪汪的喂食数量
+      - JOY_FEED_COUNT=20
+      #东东超市
+      # - SUPERMARKET_SHARECODES=
+      #兑换多少数量的京豆（20，或者1000京豆,或者其他奖品的文字）
+      - MARKET_COIN_TO_BEANS=1000
+      #如果设置了 RANDOM_DELAY_MAX ，则会启用随机延迟功能，延迟随机 0 到 RANDOM_DELAY_MAX-1 秒。如果不设置此项，则不使用延迟。
+      #并不是所有的脚本都会被启用延迟，因为有一些脚本需要整点触发。延迟的目的有两个，1是降低抢占cpu资源几率，2是降低检查风险（主要是1）
+      #填写数字，单位为秒，比如写为 RANDOM_DELAY_MAX=30  就是随机产生0到29之间的一个秒数，执行延迟的意思。
+      - RANDOM_DELAY_MAX=30
+      #使用自定义定任务追加默认任务之后，上面volumes挂载之后这里配置对应的文件名
+      - CUSTOM_LIST_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/my_crontab.txt
+      - CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/custom_shell.sh
+      # ENABLE_AUTO_HELP	单容器多账号自动互助
+      - ENABLE_AUTO_HELP=true
+      # 是否jd_crazy_joy_coin挂机
+      - CRZAY_JOY_COIN_ENABLE=Y
+      # 京东赚赚是否有通知，false为有通知
+      - DDQ_NOTIFY_CONTROL=false
+      # 宠汪汪兑换京豆推送开关
+      - JD_JOY_REWARD_NOTIFY=false
+      # 宠汪汪帮好友喂食
+      - JOY_HELP_FEED=true
+      #宠汪汪是否赛跑
+      - JOY_RUN_FLAG=true
+      # 宠汪汪宠汪汪赛跑获胜后是否推送通知
+      - JOY_RUN_NOTIFY=true
+      # 宠汪汪赛跑自己账号内部互助
+      - JOY_RUN_HELP_MYSELF=true
+      # 宠汪汪积分兑换多少京豆
+      - JD_JOY_REWARD_NAME=500
+      #东东超市兑换奖品推送开关
+      - MARKET_REWARD_NOTIFY=false
+      #疯狂的JOY循环助力
+      - JDJOY_HELPSELF=true
+      # 疯狂的JOY京豆兑换
+      - JDJOY_APPLYJDBEAN=2000
+      #控制摇钱树脚本是否自动卖出金果兑换成金币，true卖出，false不卖出，默认false
+      - MONEY_TREE_SELL_FRUIT=true
+      # 东东工厂心仪商品
+      - FACTORAY_WANTPRODUCT_NAME=
