@@ -21,3 +21,6 @@
 
 #oppo
 25 8,12 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
+
+# haier
+15 8 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
