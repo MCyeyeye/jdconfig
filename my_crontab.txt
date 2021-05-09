@@ -25,4 +25,4 @@
 # haier
 15 8 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
 
-5 * * * * /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
+5 * * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
