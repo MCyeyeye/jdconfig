@@ -1,7 +1,11 @@
-#/bin/sh
+#!/bin/sh
 
-#delete old run all task shell
-#rm -rf /scripts/runall.sh
+wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh
+
+if [ -f "/scripts/download_file.sh" ]; then
+    /bin/sh /scripts/download_file.sh
+fi
+
 
 #download run all task shell
 #wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
