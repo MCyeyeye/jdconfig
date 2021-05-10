@@ -2,7 +2,7 @@ version: "3"
 services:
   jd_scripts:
     image: lxk0301/jd_scripts
-    container_name: jd2
+    container_name: jd3
     restart: always
     network_mode: host
     volumes:
@@ -18,7 +18,7 @@ services:
       #jd cookies
       # 例: JD_COOKIE=pt_key=XXX;pt_pin=XXX;
       # 例（多账号）: JD_COOKIE=pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;
-      - JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgl-IUADCVac7g03YcPbs8yDKKmNGJWudsBNpHusub2eTpUJkf4CWJjmhNU-URuFBuoNuqt1k;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
+      - JD_COOKIE=JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgmAGCADBS9HRgCoSu7mh9IysAsICnYQcCFUDuR_Op5b5iCJWEUAQl4Eg2dljn2czvRPnFBP4;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
       #微信server酱通知
       - PUSH_KEY=SCU80767T828814dd0d1a055417c2757c9b9d93595e3e92bf2e508
       #京东种豆得豆
