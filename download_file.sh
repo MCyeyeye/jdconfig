@@ -12,6 +12,17 @@ scripts[0]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_hai
 scripts[1]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
 # 探秘无限星空
 scripts[2]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
+# 蒙牛牧场
+scripts[3]="https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
+
+#超级无线组队分奖品 25 3 * * 2
+scripts[4]="https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
+
+# 整点红包雨
+scripts[5]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
+
+# OPPO
+scripts[6]="https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
@@ -26,7 +37,7 @@ downloadFile(){
 
     script_tmp_name="${script_name}.tmp"
 
-    wget "${script_url}" -P $script_save_path -O "$script_tmp_name"
+    wget "${script_url}" -P "$script_save_path" -O "$script_tmp_name"
     
     tmp_script="${script_save_path}/${script_tmp_name}"
 
