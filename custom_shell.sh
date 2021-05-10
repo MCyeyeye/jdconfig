@@ -1,9 +1,10 @@
 #!/bin/sh
 
+rm -rf /scripts/download_file.sh
 wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh
 
 if [ -f "/scripts/download_file.sh" ]; then
-    /bin/sh /scripts/download_file.sh
+    /bin/bash /scripts/download_file.sh
 fi
 
 

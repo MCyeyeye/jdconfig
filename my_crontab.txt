@@ -1,11 +1,5 @@
-# update task and crontab
-1 6-22 * * * /bin/sh /scripts/docker/default_task.sh
-
-#delete old run all task shell
-1 * * * * rm -rf /scripts/runall.sh
-
-#download run all task shell
-2 * * * * wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
+# pull script and update crontab
+30 3 * * * /bin/sh /scripts/docker/default_task.sh
 
 # execute runall tash shell
 5 */3 * * * /bin/sh /scripts/runall.sh |ts >> /scripts/logs/runall.log 2>&1
