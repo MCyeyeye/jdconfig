@@ -40,3 +40,5 @@ for url in ${scripts[@]}
 do
     downloadFile $url
 done
+
+downloadFile "https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh"
