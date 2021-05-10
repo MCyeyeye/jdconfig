@@ -25,4 +25,8 @@
 # haier
 15 8 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
 
+# 宠汪汪
 5 * * * *  . /scripts/docker/auto_help.sh export > /scripts/logs/auto_help_export.log && node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
+
+#探秘无限星空
+15 8-12 * 5,6 * node /scripts/adolf_ETIP.js  >> /scripts/logs/adolf_ETIP.log  2>&1

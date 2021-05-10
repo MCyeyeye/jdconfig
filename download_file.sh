@@ -6,6 +6,8 @@ script_save_path="/scripts"
 #远程脚本url数组
 scripts[0]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 scripts[1]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
+# 探秘无限星空
+scripts[2]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
