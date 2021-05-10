@@ -1,11 +1,16 @@
 #!/bin/sh
 
+# install bash shell
+# apk update
+# apk upgrade
+# apk add bash
+
+# download a shell script for download file
 wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh
 
 if [ -f "/scripts/download_file.sh" ]; then
-    /bin/sh /scripts/download_file.sh
+    /bin/bash /scripts/download_file.sh
 fi
-
 
 #download run all task shell
 #wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh
