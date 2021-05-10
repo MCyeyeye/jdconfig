@@ -3,7 +3,7 @@
 # 脚本保存的路径 默认是 /scripts
 save_path="/scripts"
 
-if [ "" != $1 ]; then
+if [ "" != "$1" ]; then
     save_path=$1
 fi
 
@@ -33,7 +33,7 @@ downloadFile(){
     echo "下载的临时文件 ${tmp_script}"
 
     # 下载成功
-    if [ -f ${tmp_script} ]; then
+    if [ -f "${tmp_script}" ]; then
         mv "$tmp_script" "$script_path"
         echo "下载成功: ${script_name}"
     fi
