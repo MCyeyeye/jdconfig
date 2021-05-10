@@ -36,10 +36,10 @@ downloadFile(){
     echo "正在下载: ${script_name}"
 
     script_tmp_name="${script_name}.tmp"
-
-    wget "${script_url}" -P "$script_save_path" -O "$script_tmp_name"
     
     tmp_script="${script_save_path}/${script_tmp_name}"
+
+    wget -O "${tmp_script}" "${script_url}"
 
     echo "下载的临时文件 ${tmp_script}"
 
