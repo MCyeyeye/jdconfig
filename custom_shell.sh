@@ -1,5 +1,10 @@
 #!/bin/sh
 
+# install bash shell
+# apk update
+# apk upgrade
+# apk add bash
+
 rm -rf /scripts/download_file.sh
 wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh
 
