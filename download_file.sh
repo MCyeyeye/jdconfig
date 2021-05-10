@@ -1,5 +1,4 @@
 #!/bin/sh
-
 # 脚本保存的路径 默认是 /scripts
 script_save_path="/scripts"
 
@@ -22,20 +21,21 @@ downloadFile(){
 
     script_tmp_name="${script_name}.tmp"
 
-    wget ${script_url} -P $script_save_path -O $script_tmp_name
+    wget "${script_url}" -P $script_save_path -O "$script_tmp_name"
     
     tmp_script="${script_save_path}/${script_tmp_name}"
 
     echo "下载的临时文件 ${tmp_script}"
 
     # 下载成功
-    if [ -f $tmp_script ]; then
-        mv $tmp_script $script_path
+    if [ -f ${tmp_script} ]; then
+        mv "$tmp_script" "$script_path"
         echo "下载成功: ${script_name}"
     fi
 }
 
 # 遍历脚本数组，逐个下载
+# shellcheck disable=SC2068
 for url in ${scripts[@]}
 do
     downloadFile $url
