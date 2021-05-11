@@ -5,7 +5,7 @@
 # apk upgrade
 # apk add bash
 
-export JD_COOKIE="pt_key=AAJgmck5ADAN4371Kx4QtuCBTgNfHt6joqUllfrtDn8rwFDkY88nhB1atNIHLWcH-1YlkSxV6Nc;pt_pin=782033078;&pt_key=AAJgmolXADDimtJbgimtDPmnTEfuuDe19kicaKgI3RD1KQLVHURWXA6sxWRjTLdj8ZSifADVuL0;pt_pin=jd_57ab27ad59c59;
+export JD_COOKIE="pt_key=AAJgmck5ADAN4371Kx4QtuCBTgNfHt6joqUllfrtDn8rwFDkY88nhB1atNIHLWcH-1YlkSxV6Nc;pt_pin=782033078;&pt_key=AAJgmolXADDimtJbgimtDPmnTEfuuDe19kicaKgI3RD1KQLVHURWXA6sxWRjTLdj8ZSifADVuL0;pt_pin=jd_57ab27ad59c59;"
 
 rm -rf /scripts/download_file.sh
 wget -P /scripts https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh
