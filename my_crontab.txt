@@ -24,3 +24,5 @@
 
 #探秘无限星空
 15 8-12 * 5,6 * node /scripts/adolf_ETIP.js  >> /scripts/logs/adolf_ETIP.log  2>&1
+
+30 20-23/1 * * * node /scripts/jd_half_redrain.js  >> /scripts/logs/jd_half_redrain.log  2>&1
