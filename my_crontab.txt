@@ -11,7 +11,7 @@
 25 3 * * 2 node /scripts/z_shop_captain.js >> /scripts/logs/shop_capyain.log  2>&1
 
 # red-rain
-0-2 * * * * node /scripts/jd_super_redrain.js  >> /scripts/logs/jd_super_redrain.log  2>&1
+0-5/1 * * * *node /scripts/jd_super_redrain.js  >> /scripts/logs/jd_super_redrain.log  2>&1
 
 #oppo
 25 8,12 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
