@@ -14,10 +14,10 @@
 0-5/1 * * * *node /scripts/jd_super_redrain.js  >> /scripts/logs/jd_super_redrain.log  2>&1
 
 #oppo
-25 8,12 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
+25 * 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
 
 # haier
-15 8 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
+15 * 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
 
 # 宠汪汪
 5 */2 6-23 * *  node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
