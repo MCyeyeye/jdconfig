@@ -30,3 +30,5 @@
 
 # 母婴跳一跳
 5 8,14,20 11-17 5 * node  /scripts/z_mother_jump.js >> /scripts/logs/z_mother_jump.log  2>&1
+ 
+15 12 * * *  node  /scripts/monk_shop_add_to_car.js >> /scripts/logs/monk_shop_add_to_car.log  2>&1
