@@ -23,7 +23,10 @@
 5 */2 6-23 * *  node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
 
 #探秘无限星空
-15 8-12 * 5,6 * node /scripts/adolf_ETIP.js  >> /scripts/logs/adolf_ETIP.log  2>&1
+15 8-12 * 5,6 * node /scripts/adolf_ETIP.js   >> /scripts/logs/adolf_ETIP.log  2>&1
 
 #半点京豆雨
-30 20-23/1 * * * node /scripts/jd_half_redrain.js  >> /scripts/logs/jd_half_redrain.log  2>&1
+30 20-23/1 * * * node /scripts/jd_half_redrain.js   >> /scripts/logs/jd_half_redrain.log  2>&1
+
+# 母婴跳一跳
+5 8,14,20 11-17 5 * node  /scripts/z_mother_jump.js >> /scripts/logs/z_mother_jump.log  2>&1
