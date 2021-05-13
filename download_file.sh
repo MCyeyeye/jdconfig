@@ -25,6 +25,8 @@ scripts[5]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_s
 scripts[6]="https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
 # 半点京豆雨
 scripts[7]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
+scripts[8]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
+scripts[9]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
