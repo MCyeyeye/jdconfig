@@ -32,7 +32,6 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
-"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global_mh.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xgyl.js"
 )
 

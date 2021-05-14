@@ -49,8 +49,5 @@
 #京东球队赢好礼（不加购)
 10 16 * * * node /scripts/jd_tcl.js >> /scripts/logs/jd_tcl.log  2>&1
 
-#京东国际盲盒
-0 9,12,20,21 * * * node /scripts/jd_global_mh.js >> /scripts/logs/jd_global_mh.log  2>&1
-
 # 小鸽有礼2
 30 7 * * *  node /scripts/jd_xgyl.js >> /scripts/logs/jd_xgyl.log  2>&1
