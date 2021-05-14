@@ -10,16 +10,7 @@ let activityList = [
 ];
 
 let cookieArr = [
-    'pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;',
-    'pt_key=AAJgmr3sADAWu5zCuGY_MtCnyEYwLa34uPsdixEXgwg05B7LLf70sjFo6NUagGYE6P8qSPftAlg;pt_pin=wdNeBcDEbdsgVRp;',
-    'pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;',
-    'pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;',
-    'pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;',
-    'pt_key=AAJgmck5ADAN4371Kx4QtuCBTgNfHt6joqUllfrtDn8rwFDkY88nhB1atNIHLWcH-1YlkSxV6Nc;pt_pin=782033078;',
-    'pt_key=AAJgmolXADDimtJbgimtDPmnTEfuuDe19kicaKgI3RD1KQLVHURWXA6sxWRjTLdj8ZSifADVuL0;pt_pin=jd_57ab27ad59c59;',
-    'pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;',
-    'pt_key=AAJgm1LyADDwbvddrbROG_zMZVLhYHfEumoSaU9VQ0AFNdwUb2T_PNgeAPqQ4S9kJm9IqibeMJc;pt_pin=593852250_m;',
-    'pt_key=AAJgm1RaADA8bGb6ztNzfdqzxfAYLvcu0c5KfAhyKP-KQxTxdH7sdJ--Om_8EJFqlJOYZP04PUs;pt_pin=%E5%A5%BD%E5%90%8D%E8%AE%A9%E7%8C%AA%E5%8F%96;',
+   
 ];
 
 activityList.forEach(url => {
