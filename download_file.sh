@@ -29,6 +29,11 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 # 申请试用
 "https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
+"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
+"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_global_mh.js"
+"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xgyl.js"
 )
 
 # 定义一个函数用于下载js脚本
