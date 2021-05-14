@@ -38,3 +38,6 @@
 
 # 众筹许愿池
 10 10,15 8-9 5 *  node /scripts/z_wish.js >> /scripts/logs/z_wish.log  2>&1
+
+# 申请试用
+30 10 * * * node /scripts/jd_try.js >> /scripts/logs/jd_try.log  2>&1

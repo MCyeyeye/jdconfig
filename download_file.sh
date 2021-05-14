@@ -7,26 +7,29 @@ if [ "" != "$1" ]; then
     save_path=$1
 fi
 
-#远程脚本url数组
-scripts[1]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
-# 探秘无限星空
-scripts[2]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
+
+scripts=(
+"https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
 # 蒙牛牧场
-scripts[3]="https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
 
 #超级无线组队分奖品 25 3 * * 2
-scripts[4]="https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
 
 # 整点红包雨
-scripts[5]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
+"https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
 
 # OPPO
-scripts[6]="https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
+
 # 半点京豆雨
-scripts[7]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
-scripts[8]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
-scripts[9]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
-scripts[10]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
+"https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
+"https//raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
+# 申请试用
+"https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js"
+)
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
