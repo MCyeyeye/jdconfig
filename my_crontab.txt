@@ -33,6 +33,8 @@
  
 15 12 * * *  node  /scripts/monk_shop_add_to_car.js >> /scripts/logs/monk_shop_add_to_car.log  2>&1
 
+# fans 互动
 3 10 * * *  node  /scripts/z_fanslove.js >> /scripts/logs/z_fanslove.log  2>&1
 
-10 10,15 8-9 5 *  node  /scripts/z_wish.js >> /scripts/logs/z_wish.log  2>&1
+# 众筹许愿池
+10 10,15 8-9 5 *  node /scripts/z_wish.js >> /scripts/logs/z_wish.log  2>&1
