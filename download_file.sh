@@ -8,7 +8,6 @@ if [ "" != "$1" ]; then
 fi
 
 #远程脚本url数组
-scripts[0]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 scripts[1]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
 # 探秘无限星空
 scripts[2]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
@@ -27,6 +26,7 @@ scripts[6]="https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_
 scripts[7]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
 scripts[8]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
 scripts[9]="https://ghproxy.com/https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
+scripts[10]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
