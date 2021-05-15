@@ -7,8 +7,8 @@ if [ "" != "$1" ]; then
     save_path=$1
 fi
 
-
 scripts=(
+"https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
 # 蒙牛牧场
 "https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
