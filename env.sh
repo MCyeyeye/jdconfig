@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# bash env.sh 执行本脚本后，生成一个cookie.sh 导入cookie环境变量的脚本 /scripts/docker/cookie.sh
+# bash /scripts/docker/env.sh 执行本脚本后，生成一个cookie.sh 导入cookie环境变量的脚本 /scripts/docker/cookie.sh
 # source /scripts/docker/cookie.sh 导入cookie
 
 # 在 auto_help.sh 前面插入以下命令
@@ -26,12 +26,13 @@ cookieArr=(
 'pt_key=AAJgn20yADBo_DJX7JbYigpsE7O9jZUhjQSiCn5DTy_qIKHeo0rfj1WsQT9Oqcx-Plk8MKssEF0;pt_pin=jd_kPoGVfFTiBZL;'
 )
 
+# cookie 数组拼接为一个字符串
 cookieStr=""
 for cookie in "${cookieArr[@]}" ; do
     cookieStr="${cookieStr}&${cookie}"
 done
 
-
+# cookie字符串写入另外一个脚本
 CookieFile='/scripts/docker/cookie.sh'
 cat > ${CookieFile} <<- EOF
 #!/bin/bash
