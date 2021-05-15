@@ -10,7 +10,7 @@
 cookieArr=(
 "pt_key=AAJgnBGZADAqFPu0LHCoMQVwk3A3T_LnYkGfg039LlomRgFkVNLErkLHx3ZtL-dd_vKgM8XH4tA;pt_pin=jd_57438217ea797;"
 'pt_key=AAJgmr3sADAWu5zCuGY_MtCnyEYwLa34uPsdixEXgwg05B7LLf70sjFo6NUagGYE6P8qSPftAlg;pt_pin=wdNeBcDEbdsgVRp;'
-'pt_key=AAJgnYKMADCa3wG_p72ROEEPcvAUc9lgf6R6yO7dN-vj2W2lvED0E66ovQY87zxs04EfRX8ORdI;pt_pin=jd_5303d63f2787f;'
+'pt_key=AAJgn2nhADCiUNAGnxEeG8jGrNmObhfz4WKkYGhywm9gfDoT9OrseESjeyhjLA9om76OyOTL90E;pt_pin=jd_5303d63f2787f;'
 'pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;'
 'pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;'
 'pt_key=AAJgmck5ADAN4371Kx4QtuCBTgNfHt6joqUllfrtDn8rwFDkY88nhB1atNIHLWcH-1YlkSxV6Nc;pt_pin=782033078;'
@@ -23,7 +23,7 @@ cookieArr=(
 'pt_key=AAJgnKnWADAKx3MgQYSO06lDfoK4_NiYUnLVz_4aPGY_NHZ6WY5z2r9bg9ucFUNScro8wUr7vN0;pt_pin=%E9%80%89%E4%BB%80%E4%B9%88%E9%A2%9C%E8%89%B2;'
 'pt_key=AAJgnKlfADBUmO3pmuU_Vu2Kzzcz3vLE1HoQ5YRDEQNuZEy73e5XWWMtpie14CUr_PMLsz-baZc;pt_pin=jd_7a6c0e854544c;'
 'pt_key=AAJgm1RaADA8bGb6ztNzfdqzxfAYLvcu0c5KfAhyKP-KQxTxdH7sdJ--Om_8EJFqlJOYZP04PUs;pt_pin=%E5%A5%BD%E5%90%8D%E8%AE%A9%E7%8C%AA%E5%8F%96;'
-'pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;'
+'pt_key=AAJgn20yADBo_DJX7JbYigpsE7O9jZUhjQSiCn5DTy_qIKHeo0rfj1WsQT9Oqcx-Plk8MKssEF0;pt_pin=jd_kPoGVfFTiBZL;'
 )
 
 cookieStr=""
