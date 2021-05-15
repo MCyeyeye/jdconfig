@@ -25,7 +25,9 @@ scripts=(
 # 半点京豆雨
 "https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
 "https//raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_xmf.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 # 申请试用
 "https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js"
