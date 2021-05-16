@@ -68,9 +68,10 @@ downloadFile(){
 # shellcheck disable=SC2068
 for url in ${scripts[@]}
 do
-    downloadFile $url "$save_path"
+    downloadFile "$url" "$save_path"
 done
 
 # 更新下载脚本
 downloadShellUrl="https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh"
 downloadFile $downloadShellUrl "/scripts/docker"
+downloadFile https://raw.githubusercontent.com/evan766/jdconfig/main/collect_share_code.sh "/scripts/docker"
