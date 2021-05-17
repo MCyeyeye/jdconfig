@@ -7,22 +7,36 @@ if [ "" != "$1" ]; then
     save_path=$1
 fi
 
-#远程脚本url数组
-scripts[0]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
-scripts[1]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
-# 探秘无限星空
-scripts[2]="https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_ETIP.js"
+scripts=(
+"https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh"
+"https://raw.githubusercontent.com/evan766/jdconfig/main/evan_get_share_code.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"
 # 蒙牛牧场
-scripts[3]="https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
 
 #超级无线组队分奖品 25 3 * * 2
-scripts[4]="https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
 
 # 整点红包雨
-scripts[5]="https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
+"https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
 
 # OPPO
-scripts[6]="https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
+
+# 半点京豆雨
+"https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
+"https//raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_fanslove.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_mother_jump.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_wish.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_xmf.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
+# 申请试用
+"https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
+"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
+"https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xgyl.js"
+)
 
 # 定义一个函数用于下载js脚本
 downloadFile(){
@@ -54,9 +68,10 @@ downloadFile(){
 # shellcheck disable=SC2068
 for url in ${scripts[@]}
 do
-    downloadFile $url "$save_path"
+    downloadFile "$url" "$save_path"
 done
 
 # 更新下载脚本
 downloadShellUrl="https://raw.githubusercontent.com/evan766/jdconfig/main/download_file.sh"
 downloadFile $downloadShellUrl "/scripts/docker"
+downloadFile https://raw.githubusercontent.com/evan766/jdconfig/main/collect_share_code.sh "/scripts/docker"

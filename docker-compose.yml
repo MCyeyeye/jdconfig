@@ -18,7 +18,17 @@ services:
       #jd cookies
       # 例: JD_COOKIE=pt_key=XXX;pt_pin=XXX;
       # 例（多账号）: JD_COOKIE=pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;&pt_key=XXX;pt_pin=XXX;
-      - JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgmAGCADBS9HRgCoSu7mh9IysAsICnYQcCFUDuR_Op5b5iCJWEUAQl4Eg2dljn2czvRPnFBP4;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
+      #- JD_COOKIE=pt_key=AAJgiEPOADDLLpRIecH5A7bFUkQ3v283Y5ll1Q5wLVhlsZK0kjpDbczUG27Le63urTBcuvjGEFQ;pt_pin=jd_57438217ea797;&pt_key=AAJgmAGCADBS9HRgCoSu7mh9IysAsICnYQcCFUDuR_Op5b5iCJWEUAQl4Eg2dljn2czvRPnFBP4;pt_pin=wdNeBcDEbdsgVRp;&pt_key=AAJgirjeADAoFcyxEwMTOb9gLDqdyhXY86DAfQon40MaSGdeYQKgL9usu46Xos4fjtyxwtP-V8s;pt_pin=jd_5303d63f2787f;&pt_key=AAJgjXISADBtV8pKirEy8BUsjRPrRcoo61i4MWt1EbU7fXN3qIrbeOw--XS0yhmS2mYi8ALcH_U;pt_pin=jd_kPoGVfFTiBZL;&pt_key=AAJgjCO5ADCAnodKBFe5cQrzZ336OaUbk2dJ2IVwD_Kbiwftsx6ZIwOToTe9E0FBORI3qq2DK7Q;pt_pin=jd_48afebfcad2f5;&pt_key=AAJgkNxKADA8OR7b7eq4L7G0pDv23jnQVyNYUSc1-yaO5aFYQ2nQUDZCZAVlB0fYv_rbGBopmII;pt_pin=jd_522e5be56c1e1;&pt_key=AAJglhciADB91ipQeI-057UMDD8qzQxEKxV216t_dg-WvT1GkAkpReg35qqNptuZOcxeFkVnD50;pt_pin=782033078;
+
+      # 由于配置在docker env的cookie失效不好修改。
+      # 所有现在是创建容器以后，在容器内创建脚本： /scripts/docker/env.sh
+      # bash /scripts/docker/env.sh 可以生产 cookie 脚本 /scripts/docker/cookie.sh
+      # source /scripts/docker/cookie.sh 就可以将cookie导出到当前会话的环境变量
+      #
+      # 修改 修改容器内的 /scripts/docker/auto_help.sh 文件，在脚本前面加上以上导入cookie文件的命令
+      # bash /scripts/docker/env.sh
+      # source /scripts/docker/cookie.sh
+
       #微信server酱通知
       - PUSH_KEY=SCU80767T828814dd0d1a055417c2757c9b9d93595e3e92bf2e508
       #京东种豆得豆
