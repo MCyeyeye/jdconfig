@@ -55,3 +55,6 @@
 
 # 小鸽有礼2
 30 7 * * *  node /scripts/jd_xgyl.js >> /scripts/logs/jd_xgyl.log  2>&1
+
+# 试用查询
+10 10,19 * * *  node /scripts/try_query.js >> /scripts/logs/try_query.log  2>&1
