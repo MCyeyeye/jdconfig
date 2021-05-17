@@ -14,10 +14,6 @@ if ($.isNode()) {
     cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
-cookiesArr=[
-
-];
-
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
@@ -46,10 +42,8 @@ cookiesArr=[
         }
     }
 
-    await notify.sendNotify(`${$.name}`, `238523952035`, { url: `https://bean.m.jd.com/beanDetail/index.action?resourceValue=bean` })
-
     if ($.isNode() && allMessage) {
-        await notify.sendNotify(`${$.name}`, `${allMessage}`, { url: `https://bean.m.jd.com/beanDetail/index.action?resourceValue=bean` })
+        await notify.sendNotify(`${$.name}`, `${allMessage}`, { url: '' })
     }
 })()
     .catch((e) => {
