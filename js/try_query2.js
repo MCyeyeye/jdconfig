@@ -1,3 +1,5 @@
+const { timeStamp } = require('console');
+
 const $ = new Env('京东试用申请结果');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -54,9 +56,12 @@ if ($.isNode()) {
     })
 
 function TotalBean() {
+
+    var timestamp = Date.parse(new Date());
+
     return new Promise(async resolve => {
         const options = {
-            url: "https://try.jd.com/my/tryList?selected=2&page=1&tryVersion=2&_s=m&_=1621261235564&callback=jsonp4",
+            url: "https://try.jd.com/my/tryList?selected=2&page=1&tryVersion=2&_s=m&_="+timestamp+"&callback=jsonp3",
             headers: {
                 Host: "try.jd.com",
                 Accept: "*/*",
@@ -82,7 +87,7 @@ function TotalBean() {
 
                     if (result && result.data && result.data.data && (totalCount = result.data.data.length) > 0) {
 
-                        let successCount = totalCount === 1 ? 1: 3;
+                        let successCount = totalCount === 1 ? 1: 2;
 
                         let accountInfo = '账号' + `${$.index}` + ' ' + `【${$.UserName}`  +'】最近申请成功'+successCount+'个商品： '
 
@@ -94,18 +99,26 @@ function TotalBean() {
 
                             goodsCount++
 
-                            if (goodsCount > 3)
-                            {
+                            if (goodsCount > successCount) {
                                 return false;
                             }
 
-                            let applyDate = timeFormat(item['applyTime']);
+                            let timestamp = Date.parse(new Date()) / 1000;
+                            let applyTimestamp = item['applyTime']/1000
 
-                            console.log('申请日期：' + applyDate)
-                            console.log('商品：' + item['trialName'])
+                            if (timestamp - applyTimestamp > 3600 * 24 * 2) {
+                                return false;
+                            }
 
-                            allMessage += "\n申请日期： " + applyDate +'\n商品： ' + item['trialName']+'\n\n'
+                            if(item.text && item.text.textId === 3)
+                            {
+                                let applyDate = timeFormat(item['applyTime']);
 
+                                console.log('申请日期：' + applyDate)
+                                console.log('商品：' + item['trialName'])
+
+                                allMessage += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
+                            }
                         })
                     }
 
