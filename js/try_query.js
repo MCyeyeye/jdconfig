@@ -89,7 +89,7 @@ function TotalBean() {
 
                         let successCount = totalCount === 1 ? 1: 2;
 
-                        let accountInfo = '账号' + `${$.index}` + ' ' + `【${$.UserName}`  +'】最近申请成功'+successCount+'个商品： '
+                        let accountInfo = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}`  +'】最近申请成功'+successCount+'个商品: \n'
 
                         console.log(accountInfo);
 
