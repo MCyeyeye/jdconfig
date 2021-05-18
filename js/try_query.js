@@ -87,21 +87,13 @@ function TotalBean() {
 
                     if (result && result.data && result.data.data && (totalCount = result.data.data.length) > 0) {
 
-                        let successCount = totalCount === 1 ? 1: 2;
+                        let successCount = 0;
 
-                        let accountInfo = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}`  +'】最近申请成功'+successCount+'个商品: \n'
+                        let isSuccess = false;
 
-                        console.log(accountInfo);
-
-                        allMessage += accountInfo
-
+                        let applySuccessMsg = '';
+                        
                         result.data.data.forEach((item) => {
-
-                            goodsCount++
-
-                            if (goodsCount > successCount) {
-                                return false;
-                            }
 
                             let timestamp = Date.parse(new Date()) / 1000;
                             let applyTimestamp = item['applyTime']/1000
@@ -112,14 +104,26 @@ function TotalBean() {
 
                             if(item.text && item.text.textId === 3)
                             {
+                                isSuccess = true;
+                                successCount++
+
                                 let applyDate = timeFormat(item['applyTime']);
 
                                 console.log('申请日期：' + applyDate)
                                 console.log('商品：' + item['trialName'])
 
-                                allMessage += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
+                                applySuccessMsg += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
                             }
                         })
+
+                        if (isSuccess)
+                        {
+                            let accountInfo = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}` + '】最近申请成功' + successCount + '个商品: \n'
+
+                            console.log(accountInfo);
+
+                            allMessage  = allMessage + accountInfo + applySuccessMsg
+                        }
                     }
 
                     // console.log(list)
