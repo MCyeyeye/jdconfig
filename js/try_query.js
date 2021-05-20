@@ -54,9 +54,12 @@ if ($.isNode()) {
     })
 
 function TotalBean() {
+
+    var timestamp = Date.parse(new Date());
+
     return new Promise(async resolve => {
         const options = {
-            url: "https://try.jd.com/my/tryList?selected=2&page=1&tryVersion=2&_s=m&_=1621261235564&callback=jsonp4",
+            url: "https://try.jd.com/my/tryList?selected=2&page=1&tryVersion=2&_s=m&_="+timestamp+"&callback=jsonp3",
             headers: {
                 Host: "try.jd.com",
                 Accept: "*/*",
@@ -78,35 +81,45 @@ function TotalBean() {
 
                     result=JSON.parse(data)
 
-                    let goodsCount = 0
-
                     if (result && result.data && result.data.data && (totalCount = result.data.data.length) > 0) {
 
-                        let successCount = totalCount === 1 ? 1: 3;
+                        let successCount = 0;
 
-                        let accountInfo = '账号' + `${$.index}` + ' ' + `【${$.UserName}`  +'】最近申请成功'+successCount+'个商品： '
+                        let isSuccess = false;
 
-                        console.log(accountInfo);
-
-                        allMessage += accountInfo
-
+                        let applySuccessMsg = '';
+                        
                         result.data.data.forEach((item) => {
 
-                            goodsCount++
+                            let timestamp = Date.parse(new Date()) / 1000;
+                            let applyTimestamp = item['applyTime']/1000
 
-                            if (goodsCount > 3)
-                            {
+                            if (timestamp - applyTimestamp > 3600 * 24 * 7) {
                                 return false;
                             }
 
-                            let applyDate = timeFormat(item['applyTime']);
+                            if(item.text && item.text.textId === 3)
+                            {
+                                isSuccess = true;
+                                successCount++
 
-                            console.log('申请日期：' + applyDate)
-                            console.log('商品：' + item['trialName'])
+                                let applyDate = timeFormat(item['applyTime']);
 
-                            allMessage += "\n申请日期： " + applyDate +'\n商品： ' + item['trialName']+'\n\n'
+                                console.log('申请日期：' + applyDate)
+                                console.log('商品：' + item['trialName'])
 
+                                applySuccessMsg += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
+                            }
                         })
+
+                        if (isSuccess)
+                        {
+                            let accountInfo = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}` + '】最近申请成功' + successCount + '个商品: \n'
+
+                            console.log(accountInfo);
+
+                            allMessage  = allMessage + accountInfo + applySuccessMsg
+                        }
                     }
 
                     // console.log(list)

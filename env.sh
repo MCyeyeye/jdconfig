@@ -8,8 +8,6 @@
 # source /scripts/docker/cookie.sh
 
 
-export
-
 cookieArr=(
 "pt_key=AAJgnBGZADAqFPu0LHCoMQVwk3A3T_LnYkGfg039LlomRgFkVNLErkLHx3ZtL-dd_vKgM8XH4tA;pt_pin=jd_57438217ea797;"
 'pt_key=AAJgmr3sADAWu5zCuGY_MtCnyEYwLa34uPsdixEXgwg05B7LLf70sjFo6NUagGYE6P8qSPftAlg;pt_pin=wdNeBcDEbdsgVRp;'
