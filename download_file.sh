@@ -8,6 +8,7 @@ if [ "" != "$1" ]; then
 fi
 
 scripts=(
+"https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtect.js"
 "https://raw.githubusercontent.com/evan766/jdconfig/main/runall.sh"
 "https://raw.githubusercontent.com/evan766/jdconfig/main/evan_get_share_code.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/monk_shop_add_to_car.js"

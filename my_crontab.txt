@@ -1,6 +1,9 @@
 # pull script and update crontab
 30 3 * * * /bin/sh /scripts/docker/default_task.sh
 
+# 价格保护
+5 0,9 * * * node /scripts/jd_priceProtect.js >> /scripts/logs/jd_priceProtect.log  2>&1
+
 # execute runall tash shell
 5 */3 * * * /bin/sh /scripts/runall.sh |ts >> /scripts/logs/runall.log 2>&1
 
