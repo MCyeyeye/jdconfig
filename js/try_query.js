@@ -1,5 +1,3 @@
-const { timeStamp } = require('console');
-
 const $ = new Env('京东试用申请结果');
 const notify = $.isNode() ? require('./sendNotify') : '';
 //Node.js用户请在jdCookie.js处填写京东ck;
@@ -83,8 +81,6 @@ function TotalBean() {
 
                     result=JSON.parse(data)
 
-                    let goodsCount = 0
-
                     if (result && result.data && result.data.data && (totalCount = result.data.data.length) > 0) {
 
                         let successCount = 0;
@@ -98,7 +94,7 @@ function TotalBean() {
                             let timestamp = Date.parse(new Date()) / 1000;
                             let applyTimestamp = item['applyTime']/1000
 
-                            if (timestamp - applyTimestamp > 3600 * 24 * 2) {
+                            if (timestamp - applyTimestamp > 3600 * 24 * 7) {
                                 return false;
                             }
 

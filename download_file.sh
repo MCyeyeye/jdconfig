@@ -36,6 +36,9 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_xgyl.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js"
 )
 
 # 定义一个函数用于下载js脚本
