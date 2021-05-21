@@ -38,6 +38,9 @@ cat > ${CookieFile} <<- EOF
 #!/bin/bash
 
 export JD_COOKIE="${cookieStr:1}"
+
+export IGOT_PUSH_KEY="60a40a4c1ea12833f30aefde"
+
 EOF
 
 # shellcheck disable=SC1090
