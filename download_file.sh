@@ -39,6 +39,7 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_oneplus.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_mi.js"
 )
 
 # 定义一个函数用于下载js脚本
