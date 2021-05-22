@@ -42,6 +42,8 @@ export JD_COOKIE="${cookieStr:1}"
 
 export IGOT_PUSH_KEY="60a40a4c1ea12833f30aefde"
 
+export JD_TRY_WANT_KEY_WORDS="显示器@显示屏@风扇@落地扇@路由器@笔记本电脑@无线鼠标@蓝牙音箱@机械键盘@U盘@固态硬盘@密码锁@指纹锁@台式电脑@内存条@电动牙刷@打印器@平板电脑@摄像头@硬盘@充电器@扩展坞"
+
 EOF
 
 # shellcheck disable=SC1090
