@@ -42,6 +42,8 @@ export JD_COOKIE="${cookieStr:1}"
 
 export IGOT_PUSH_KEY="60a40a4c1ea12833f30aefde"
 
+export JD_TRY_MIN_PRICE=100
+export JD_TRY_GOOD_FILTERS="教程@软件@英语@辅导@培训@情趣@电话卡@手机卡@牙刷头@文具@一柒@手机卡@贴膜"
 export JD_TRY_WANT_KEY_WORDS="显示器@显示屏@风扇@落地扇@路由器@笔记本电脑@无线鼠标@蓝牙音箱@机械键盘@U盘@固态硬盘@密码锁@指纹锁@台式电脑@内存条@电动牙刷@打印器@平板电脑@摄像头@硬盘@充电器@扩展坞@小米11@荣耀30Pro@蓝牙耳机@PD快充@快充PD@小风扇@挂脖风扇"
 
 EOF
