@@ -69,4 +69,4 @@
 
 25 9 * 5,6 * node /scripts/adolf_oneplus.js >> /scripts/logs/adolf_oneplus.log  2>&1
 
-20 6-23 * * *  node  /scripts/jd_city.js |ts >> /scripts/logs/jd_city.log 2>&1
+20 6-23 * * *  node  /scripts/my_jd_city.js |ts >> /scripts/logs/my_jd_city.log 2>&1
