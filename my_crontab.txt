@@ -20,13 +20,13 @@
 30,31,32 * * * * node /scripts/jd_half_redrain.js   >> /scripts/logs/jd_half_redrain.log  2>&1
 
 #oppo
-25 * 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
+#25 * 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
 
 # haier
 15 * 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
 
 # 宠汪汪
-5 */2 6-23 * *  node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
+5 */2 6-23 * *  node  /scripts/jd_joy.js  >> /scripts/logs/jd_joy.log 2>&1
 
 #探秘无限星空
 #15 * * 5,6 * node /scripts/adolf_ETIP.js   >> /scripts/logs/adolf_ETIP.log  2>&1
@@ -57,7 +57,7 @@
 # 试用查询
 10 10,16 * * *  node /scripts/try_query.js >> /scripts/logs/try_query.log  2>&1
 
-15 20,23 * * *  node  /scripts/jd_fruit.js |ts >> /scripts/logs/jd_fruit.log 2>&1
+15 20,23 * * *  node  /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
 20 9 20-31 5 *  node /scripts/adolf_martin.js >> /scripts/logs/adolf_martin.log  2>&1
 
