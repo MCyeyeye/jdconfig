@@ -68,3 +68,5 @@
 40 9 * * * node  /scripts/jd_unsubscribe.js |ts >> /scripts/logs/jd_unsubscribe.log 2>&1
 
 25 9 * 5,6 * node /scripts/adolf_oneplus.js >> /scripts/logs/adolf_oneplus.log  2>&1
+
+15 9,20 * 5,6 * node /scripts/adolf_newInteraction.js >> /scripts/logs/adolf_newInteraction.log  2>&1
