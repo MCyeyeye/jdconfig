@@ -32,7 +32,7 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_xmf.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 # 申请试用
-"https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_try.js"
+"https://raw.githubusercontent.com/evan766/daily_scripts/main/jd/jd_try.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
@@ -42,6 +42,8 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_mi.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_newInteraction.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_carnivalcity.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_urge.js"
 )
 
 # 定义一个函数用于下载js脚本

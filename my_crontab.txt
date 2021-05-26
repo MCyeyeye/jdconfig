@@ -20,13 +20,13 @@
 30,31,32 * * * * node /scripts/jd_half_redrain.js   >> /scripts/logs/jd_half_redrain.log  2>&1
 
 #oppo
-25 * 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
+#25 * 6-11 5 * node /scripts/adolf_oppo.js  >> /scripts/logs/adolf_oppo.log  2>&1
 
 # haier
 15 * 7-31 5 * node /scripts/adolf_haier.js  >> /scripts/logs/adolf_haier.log  2>&1
 
 # 宠汪汪
-5 */2 6-23 * *  node  /scripts/jd_joy.js |ts >> /scripts/logs/jd_joy.log 2>&1
+5 */2 6-23 * *  node  /scripts/jd_joy.js  >> /scripts/logs/jd_joy.log 2>&1
 
 #探秘无限星空
 #15 * * 5,6 * node /scripts/adolf_ETIP.js   >> /scripts/logs/adolf_ETIP.log  2>&1
@@ -47,7 +47,7 @@
 10 10,15 8-9 5 *  node /scripts/z_wish.js >> /scripts/logs/z_wish.log  2>&1
 
 # 申请试用
-10 10,18 * * * node /scripts/jd_try.js >> /scripts/logs/jd_try.log  2>&1
+10 9,12,17,20 * * * node /scripts/jd_try.js >> /scripts/logs/jd_try.log  2>&1
 
 15 15 * * * node /scripts/monk_shop_follow_sku.js >> /scripts/logs/monk_shop_follow_sku.log  2>&1
 
@@ -57,7 +57,7 @@
 # 试用查询
 10 10,16 * * *  node /scripts/try_query.js >> /scripts/logs/try_query.log  2>&1
 
-15 20,23 * * *  node  /scripts/jd_fruit.js |ts >> /scripts/logs/jd_fruit.log 2>&1
+15 20,23 * * *  node  /scripts/jd_fruit.js >> /scripts/logs/jd_fruit.log 2>&1
 
 20 9 20-31 5 *  node /scripts/adolf_martin.js >> /scripts/logs/adolf_martin.log  2>&1
 
@@ -65,8 +65,13 @@
 
 15 9 * 5,6 * node /scripts/adolf_flp.js >> /scripts/logs/adolf_flp.log  2>&1
 
-40 9 * * * node  /scripts/jd_unsubscribe.js |ts >> /scripts/logs/jd_unsubscribe.log 2>&1
+40 9 * * * node  /scripts/jd_unsubscribe.js  >> /scripts/logs/jd_unsubscribe.log 2>&1
 
 25 9 * 5,6 * node /scripts/adolf_oneplus.js >> /scripts/logs/adolf_oneplus.log  2>&1
 
 15 9,20 * 5,6 * node /scripts/adolf_newInteraction.js >> /scripts/logs/adolf_newInteraction.log  2>&1
+
+20 6-23 * * *  node  /scripts/my_jd_city.js >> /scripts/logs/my_jd_city.log 2>&1
+28 9 18-26 5 * node8 /scripts/adolf_urge.js >> /scripts/logs/adolf_urge.log 2>&1
+
+2 0-18/2 * 5,6 * node /scripts/z_carnivalcity.js >> /scripts/logs/z_carnivalcity.log 2>&1
