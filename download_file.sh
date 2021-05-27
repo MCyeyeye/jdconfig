@@ -43,6 +43,9 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_mi.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_carnivalcity.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_urge.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_jxhb.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_superbox.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_star.js"
 )
 
 # 定义一个函数用于下载js脚本
