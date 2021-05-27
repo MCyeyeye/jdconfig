@@ -14,6 +14,10 @@ if ($.isNode()) {
     cookiesArr = [$.getdata('CookieJD'), $.getdata('CookieJD2'), ...jsonParse($.getdata('CookiesJD') || "[]").map(item => item.cookie)].filter(item => !!item);
 }
 
+let applyPages  = 0;
+let currentPage = 1;
+let yesterdayApplyCount = 0;
+
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
@@ -28,7 +32,26 @@ if ($.isNode()) {
             $.isLogin = true;
             $.nickName = '';
 
-            await TotalBean();
+            yesterdayApplyCount=0
+            applyPages=0
+            currentPage=1
+
+            // 申请中
+            await doQuery(1);
+
+            while (currentPage < applyPages)
+            {
+                await doQuery(1, currentPage+1)
+            }
+
+            let yesterdayMsg = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}` + '】昨天提交' + yesterdayApplyCount + '个申请: \n'
+
+            allMessage += yesterdayMsg
+
+            console.log(yesterdayMsg)
+
+            // 成功
+            await doQuery(2);
 
             console.log(`\n********开始【京东账号${$.index}】${$.nickName || $.UserName}******\n`);
             if (!$.isLogin) {
@@ -53,13 +76,13 @@ if ($.isNode()) {
         $.done();
     })
 
-function TotalBean() {
+function doQuery(selectType, page=1) {
 
     var timestamp = Date.parse(new Date());
 
     return new Promise(async resolve => {
-        const options = {
-            url: "https://try.jd.com/my/tryList?selected=2&page=1&tryVersion=2&_s=m&_="+timestamp+"&callback=jsonp3",
+        let options = {
+            url: "https://try.jd.com/my/tryList?selected="+selectType+"&page="+page+"&tryVersion=2&_s=m&_="+timestamp+"&callback=jsonp3",
             headers: {
                 Host: "try.jd.com",
                 Accept: "*/*",
@@ -71,59 +94,72 @@ function TotalBean() {
                 "Accept-Encoding": "gzip, deflate, br"
             }
         }
+
         $.get(options, (err, resp, data) => {
+            let result;
             try {
                 if (err) {
                     $.logErr(err)
                 } else {
                     data = data.substring(11)
-                    data = data.substring(0,data.length-2)
+                    data = data.substring(0, data.length - 2)
 
-                    result=JSON.parse(data)
+                    result = JSON.parse(data)
 
                     if (result && result.data && result.data.data && (totalCount = result.data.data.length) > 0) {
+                        // 总数据页数
+                        applyPages=result.data.pages
+                        currentPage=result.data.page
+
+                        let yesterday = new Date();
+                        yesterday.setTime(yesterday.getTime() - 24 * 60 * 60 * 1000);
 
                         let successCount = 0;
 
                         let isSuccess = false;
 
                         let applySuccessMsg = '';
-                        
+
                         result.data.data.forEach((item) => {
 
-                            let timestamp = Date.parse(new Date()) / 1000;
-                            let applyTimestamp = item['applyTime']/1000
+                            // 申请成功列表
+                            if (selectType === 2){
 
-                            if (timestamp - applyTimestamp > 3600 * 24 * 7) {
-                                return false;
-                            }
+                                if (item.text && item.text.textId === 3) {
+                                    isSuccess = true;
+                                    successCount++
 
-                            if(item.text && item.text.textId === 3)
+                                    let applyDate = timeFormat(item['applyTime']);
+
+                                    console.log('申请日期：' + applyDate)
+                                    console.log('商品：' + item['trialName'])
+
+                                    applySuccessMsg += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
+                                }
+
+
+                            }else if (selectType === 1)
                             {
-                                isSuccess = true;
-                                successCount++
+                                //申请中列表
+                                let applyDate = new Date(item['applyTime'])
 
-                                let applyDate = timeFormat(item['applyTime']);
+                                if (applyDate.getMonth() === yesterday.getMonth() && applyDate.getDate() === yesterday.getDate()) {
+                                    yesterdayApplyCount++
+                                }
 
-                                console.log('申请日期：' + applyDate)
-                                console.log('商品：' + item['trialName'])
-
-                                applySuccessMsg += "\n申请日期： " + applyDate + '\n商品： ' + item['trialName'] + '\n\n'
                             }
+
+
                         })
 
-                        if (isSuccess)
-                        {
+                        if (isSuccess) {
                             let accountInfo = '\n账号' + `${$.index}` + ' ' + `【${$.UserName}` + '】最近申请成功' + successCount + '个商品: \n'
 
                             console.log(accountInfo);
 
-                            allMessage  = allMessage + accountInfo + applySuccessMsg
+                            allMessage = allMessage + accountInfo + applySuccessMsg
                         }
                     }
-
-                    // console.log(list)
-
                 }
             } catch (e) {
                 $.logErr(e)
