@@ -41,6 +41,7 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/member/adolf_flp.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_martin.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_mi.js"
+"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_newInteraction.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_carnivalcity.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_urge.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_jxhb.js"
