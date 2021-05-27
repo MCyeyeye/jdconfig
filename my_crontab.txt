@@ -47,7 +47,7 @@
 10 10,15 8-9 5 *  node /scripts/z_wish.js >> /scripts/logs/z_wish.log  2>&1
 
 # 申请试用
-10 9,12,17,20,22 * * * node /scripts/jd_try.js >> /scripts/logs/jd_try.log  2>&1
+10 10,12,17,20,22 * * * node /scripts/jd_try.js >> /scripts/logs/jd_try.log  2>&1
 
 15 15 * * * node /scripts/monk_shop_follow_sku.js >> /scripts/logs/monk_shop_follow_sku.log  2>&1
 
