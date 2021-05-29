@@ -16,13 +16,13 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/member/monk_pasture.js"
 
 #超级无线组队分奖品 25 3 * * 2
-"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
+#"https://raw.githubusercontent.com/monk-coder/dust/dust/i-chenzhe/z_shop_captain.js"
 
 # 整点红包雨
 "https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_super_redrain.js"
 
 # OPPO
-"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
+#"https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_oppo.js"
 
 # 半点京豆雨
 "https://raw.githubusercontent.com/nianyuguai/longzhuzhu/main/qx/jd_half_redrain.js"
@@ -48,6 +48,7 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_jxhb.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_superbox.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_star.js"
+"https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js"
 )
 
 # 定义一个函数用于下载js脚本
