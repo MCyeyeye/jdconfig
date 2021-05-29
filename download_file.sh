@@ -33,6 +33,7 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/car/adolf_haier.js"
 # 申请试用
 "https://raw.githubusercontent.com/evan766/daily_scripts/main/jd/jd_try.js"
+"https://raw.githubusercontent.com/evan766/jdconfig/main/js/try_query.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_follow_sku.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/monk_shop_lottery.js"
 "https://jdsharedresourcescdn.azureedge.net/jdresource/jd_tcl.js"
