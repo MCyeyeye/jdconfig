@@ -83,4 +83,5 @@
 #家电星推官
 40 8-18/3 * 5,6 * node /scripts/adolf_star.js >> /scripts/logs/adolf_star.log 2>&1
 
-40 6,8,18,20 * * * node /scripts/jx_nc.js >> /scripts/logs/jx_nc.log 2>&1
+#主力有问题
+#40 6,8,18,20 * * * node /scripts/jx_nc.js >> /scripts/logs/jx_nc.log 2>&1
