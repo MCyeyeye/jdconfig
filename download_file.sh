@@ -49,6 +49,9 @@ scripts=(
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_superbox.js"
 "https://raw.githubusercontent.com/monk-coder/dust/dust/normal/adolf_star.js"
 "https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_nc.js"
+"https://ghproxy.com/https://raw.githubusercontent.com/zooPanda/zoo/dev/zooLongzhou.js"
+"https://ghproxy.com/https://raw.githubusercontent.com/yangtingxiao/QuantumultX/master/scripts/jd/jd_baiTiao.js"
+"https://ghproxy.com/https://raw.githubusercontent.com/panghu999/panghu/master/jd_wsdlb.js"
 )
 
 # 定义一个函数用于下载js脚本
