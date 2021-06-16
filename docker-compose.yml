@@ -1,12 +1,12 @@
 version: "3"
 services:
   jd_scripts:
-    image: lxk0301/jd_scripts
-    container_name: jd3
+    image: evan766/xd20210615:v1
+    container_name: jdyy
     restart: always
     network_mode: host
     volumes:
-      - /root/host_dir_jd:/scripts/host_dir
+      - E:\jdyy_dir:/scripts/host_dir
     tty: true
     extra_hosts:
       - "gitee.com:180.97.125.228"
@@ -30,7 +30,7 @@ services:
       # source /scripts/docker/cookie.sh
 
       #微信server酱通知
-      - PUSH_KEY=SCU80767T828814dd0d1a055417c2757c9b9d93595e3e92bf2e508
+      - PUSH_KEY=SCT46106TrS4kVnrhVfEXL1Cr6dhxebVK
       #京东种豆得豆
       - PLANT_BEAN_SHARECODES=
       #京东农场
@@ -50,14 +50,14 @@ services:
       #填写数字，单位为秒，比如写为 RANDOM_DELAY_MAX=30  就是随机产生0到29之间的一个秒数，执行延迟的意思。
       #- RANDOM_DELAY_MAX=30
       #使用自定义定任务追加默认任务之后，上面volumes挂载之后这里配置对应的文件名
-      - CUSTOM_LIST_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/my_crontab.txt
-      - CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/evan766/jdconfig/main/custom_shell.sh
+      - CUSTOM_LIST_FILE=https://raw.githubusercontent.com/MCyeyeye/jdconfig/main/my_crontab.txt
+      - CUSTOM_SHELL_FILE=https://raw.githubusercontent.com/MCyeyeye/jdconfig/main/collect_share_code.sh
       # ENABLE_AUTO_HELP	单容器多账号自动互助
       - ENABLE_AUTO_HELP=true
       # 是否jd_crazy_joy_coin挂机
       - CRZAY_JOY_COIN_ENABLE=Y
       # 京东赚赚是否有通知，false为有通知
-      - DDQ_NOTIFY_CONTROL=false
+      - DDQ_NOTIFY_CONTROL=true
       # 宠汪汪兑换京豆推送开关
       - JD_JOY_REWARD_NOTIFY=false
       # 宠汪汪帮好友喂食
